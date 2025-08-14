@@ -1,0 +1,55 @@
+QuestaSim-64 vlog 2021.2_1 Compiler 2021.05 May 15 2021
+Start time: 16:27:13 on Aug 14,2025
+vlog "+define+UVM_NO_DPI" "+cover=bcesft" "+acc" -sv -f filelist.f "+define+APB_MAX_DATA_WIDTH=8" "+define+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR" 
+-- Compiling module COMP
+-- Compiling module TCCR
+-- Compiling module TCNT
+-- Compiling module TCOR
+-- Compiling module TCR
+-- Compiling module TCSR
+-- Compiling module Timer_register
+-- Compiling module apb_master_byte_masking
+-- Compiling module apb_register
+-- Compiling module apb_slave_timer
+-- Compiling module clk_sel_channel
+-- Compiling module clock_select
+-- Compiling module comparator
+-- Compiling module control_logic
+-- Compiling module high_level_detector
+-- Compiling module low_level_detector
+-- Compiling module mux_2_to_1
+-- Compiling module negedge_detector
+-- Compiling module param_d_ff
+-- Compiling module param_mux
+** Warning: ../RTL/param_mux.sv(6): (vlog-13314) Defaulting port 'in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module pos_det_mode16
+-- Compiling module posedge_detector
+-- Compiling module priority_encoder
+-- Compiling module timer_top
+-- Compiling module wait_state_shift_reg
+** Note: (vlog-2286) ../tb/testbench.sv(2): Using implicit +incdir+/home/shared_folder/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+-- Compiling interface apb_slave_if
+** Error: ** while parsing file included at ../tb/testbench.sv(4)
+** at /home/shared_folder/workspace/VIP/vip_lib/apb/apb_if.sv(16): (vlog-2730) Undefined variable: 'APB_MAX_ADDR_WIDTH'.
+** Error: ** while parsing file included at ../tb/testbench.sv(4)
+** at /home/shared_folder/workspace/VIP/vip_lib/apb/apb_if.sv(17): (vlog-2730) Undefined variable: 'APB_MAX_DATA_WIDTH'.
+-- Compiling interface apb_if
+** Error: ** while parsing file included at ../tb/testbench.sv(4)
+** at /home/shared_folder/workspace/VIP/vip_lib/apb/apb_if.sv(48): (vlog-2730) Undefined variable: 'APB_MAX_NUM_SLAVES'.
+** Error: ** while parsing file included at ../tb/testbench.sv(4)
+** at /home/shared_folder/workspace/VIP/vip_lib/apb/apb_if.sv(53): (vlog-2730) Undefined variable: 'APB_MAX_ADDR_WIDTH'.
+** Error: ** while parsing file included at ../tb/testbench.sv(4)
+** at /home/shared_folder/workspace/VIP/vip_lib/apb/apb_if.sv(54): (vlog-2730) Undefined variable: 'APB_MAX_DATA_WIDTH'.
+-- Compiling package apb_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+** Error: ** while parsing file included at ../tb/testbench.sv(5)
+** while parsing file included at /home/shared_folder/workspace/VIP/vip_lib/apb/apb_pkg.sv(8)
+** at /home/shared_folder/workspace/VIP/vip_lib/apb/agent/apb_master_driver.sv(1): (vlog-2730) Undefined variable: 'apb_transaction'.
+** Error: ** while parsing file included at ../tb/testbench.sv(5)
+** while parsing file included at /home/shared_folder/workspace/VIP/vip_lib/apb/apb_pkg.sv(8)
+** at /home/shared_folder/workspace/VIP/vip_lib/apb/agent/apb_master_driver.sv(26): (vlog-2400) Identifier ('apb_transaction') found where a type or type identifier is required.
+** Error: (vlog-13069) ** while parsing file included at ../tb/testbench.sv(5)
+** while parsing file included at /home/shared_folder/workspace/VIP/vip_lib/apb/apb_pkg.sv(8)
+** at /home/shared_folder/workspace/VIP/vip_lib/apb/agent/apb_master_driver.sv(26): near ")": syntax error, unexpected ')', expecting class.
+End time: 16:27:13 on Aug 14,2025, Elapsed time: 0:00:00
+Errors: 8, Warnings: 1
