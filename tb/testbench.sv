@@ -1,8 +1,8 @@
 `timescale 1ns/1ps
+`include "common.svh"
 `include "uvm_macros.svh"
-`include "common.sv"
-`include "apb_if.sv"
 `include "apb_pkg.sv"
+`include "apb_if.sv"
 
 module testbench;
 

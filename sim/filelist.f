@@ -1,12 +1,10 @@
-+incdir+../RTL
-+incdir+$VIP_HOME/vip_lib/apb
-+incdir+$VIP_HOME/vip_lib/apb/agent
-+incdir+../seq
-+incdir+../tests
-+incdir+../interface
-+incdir+../env
+$VIP_HOME/vip_lib/apb/common.svh
+$VIP_HOME/vip_lib/apb/apb_if.sv
+$VIP_HOME/vip_lib/apb/apb_pkg.sv
 
-$VIP_HOME/vip_lib/apb/common.sv
 ../RTL/*.sv
+
 ../tb/testbench.sv
+
 ../tests/inc_test.sv
+

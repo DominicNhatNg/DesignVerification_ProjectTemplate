@@ -88,8 +88,8 @@ if (! -d $LOG_DIR) then
 endif
 
 # Compile
-vlib work
-vmap work work
+#vlib work
+#vmap work work
 vlog -sv +cover=bcesft +acc -f filelist.f |& tee $LOG_DIR/compile.log
 
 # Run sim

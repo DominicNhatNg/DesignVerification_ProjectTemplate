@@ -1,55 +1,388 @@
 QuestaSim-64 vlog 2021.2_1 Compiler 2021.05 May 15 2021
-Start time: 16:27:13 on Aug 14,2025
+Start time: 18:01:21 on Aug 16,2025
 vlog "+define+UVM_NO_DPI" "+cover=bcesft" "+acc" -sv -f filelist.f "+define+APB_MAX_DATA_WIDTH=8" "+define+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR" 
--- Compiling module COMP
--- Compiling module TCCR
--- Compiling module TCNT
--- Compiling module TCOR
--- Compiling module TCR
--- Compiling module TCSR
--- Compiling module Timer_register
--- Compiling module apb_master_byte_masking
--- Compiling module apb_register
--- Compiling module apb_slave_timer
--- Compiling module clk_sel_channel
--- Compiling module clock_select
--- Compiling module comparator
--- Compiling module control_logic
--- Compiling module high_level_detector
--- Compiling module low_level_detector
--- Compiling module mux_2_to_1
--- Compiling module negedge_detector
--- Compiling module param_d_ff
--- Compiling module param_mux
-** Warning: ../RTL/param_mux.sv(6): (vlog-13314) Defaulting port 'in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
--- Compiling module pos_det_mode16
--- Compiling module posedge_detector
--- Compiling module priority_encoder
--- Compiling module timer_top
--- Compiling module wait_state_shift_reg
-** Note: (vlog-2286) ../tb/testbench.sv(2): Using implicit +incdir+/home/shared_folder/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
 -- Compiling interface apb_slave_if
-** Error: ** while parsing file included at ../tb/testbench.sv(4)
-** at /home/shared_folder/workspace/VIP/vip_lib/apb/apb_if.sv(16): (vlog-2730) Undefined variable: 'APB_MAX_ADDR_WIDTH'.
-** Error: ** while parsing file included at ../tb/testbench.sv(4)
-** at /home/shared_folder/workspace/VIP/vip_lib/apb/apb_if.sv(17): (vlog-2730) Undefined variable: 'APB_MAX_DATA_WIDTH'.
+** Error: /home/nhat/Veron_VIP/vip_lib/apb/apb_if.sv(18): (vlog-2730) Undefined variable: 'APB_MAX_ADDR_WIDTH'.
+** Error: /home/nhat/Veron_VIP/vip_lib/apb/apb_if.sv(19): (vlog-2730) Undefined variable: 'APB_MAX_DATA_WIDTH'.
 -- Compiling interface apb_if
-** Error: ** while parsing file included at ../tb/testbench.sv(4)
-** at /home/shared_folder/workspace/VIP/vip_lib/apb/apb_if.sv(48): (vlog-2730) Undefined variable: 'APB_MAX_NUM_SLAVES'.
-** Error: ** while parsing file included at ../tb/testbench.sv(4)
-** at /home/shared_folder/workspace/VIP/vip_lib/apb/apb_if.sv(53): (vlog-2730) Undefined variable: 'APB_MAX_ADDR_WIDTH'.
-** Error: ** while parsing file included at ../tb/testbench.sv(4)
-** at /home/shared_folder/workspace/VIP/vip_lib/apb/apb_if.sv(54): (vlog-2730) Undefined variable: 'APB_MAX_DATA_WIDTH'.
+** Error: /home/nhat/Veron_VIP/vip_lib/apb/apb_if.sv(50): (vlog-2730) Undefined variable: 'APB_MAX_NUM_SLAVES'.
+** Error: /home/nhat/Veron_VIP/vip_lib/apb/apb_if.sv(55): (vlog-2730) Undefined variable: 'APB_MAX_ADDR_WIDTH'.
+** Error: /home/nhat/Veron_VIP/vip_lib/apb/apb_if.sv(56): (vlog-2730) Undefined variable: 'APB_MAX_DATA_WIDTH'.
+** Error: /home/nhat/Veron_VIP/vip_lib/apb/apb_if.sv(62): (vlog-2730) Undefined variable: 'ABP_MAX_NUM_SLAVES'.
 -- Compiling package apb_pkg
 -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
-** Error: ** while parsing file included at ../tb/testbench.sv(5)
-** while parsing file included at /home/shared_folder/workspace/VIP/vip_lib/apb/apb_pkg.sv(8)
-** at /home/shared_folder/workspace/VIP/vip_lib/apb/agent/apb_master_driver.sv(1): (vlog-2730) Undefined variable: 'apb_transaction'.
-** Error: ** while parsing file included at ../tb/testbench.sv(5)
-** while parsing file included at /home/shared_folder/workspace/VIP/vip_lib/apb/apb_pkg.sv(8)
-** at /home/shared_folder/workspace/VIP/vip_lib/apb/agent/apb_master_driver.sv(26): (vlog-2400) Identifier ('apb_transaction') found where a type or type identifier is required.
-** Error: (vlog-13069) ** while parsing file included at ../tb/testbench.sv(5)
-** while parsing file included at /home/shared_folder/workspace/VIP/vip_lib/apb/apb_pkg.sv(8)
-** at /home/shared_folder/workspace/VIP/vip_lib/apb/agent/apb_master_driver.sv(26): near ")": syntax error, unexpected ')', expecting class.
-End time: 16:27:13 on Aug 14,2025, Elapsed time: 0:00:00
-Errors: 8, Warnings: 1
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(6)
+** at /home/nhat/Veron_VIP/vip_lib/apb/agent/apb_cfg.sv(13): (vlog-2163) Macro `uvm_object_utils is undefined.
+** Error: (vlog-13069) ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(6)
+** at /home/nhat/Veron_VIP/vip_lib/apb/agent/apb_cfg.sv(13): near "(": syntax error, unexpected '(', expecting function or task or "SystemVerilog keyword 'pure'".
+-- Compiling module TCOR
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(6)
+** at ../RTL/TCOR.sv(2): Illegal use of 'automatic' for variable declaration (i_clk_sys).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(6)
+** at ../RTL/TCOR.sv(3): Illegal use of 'automatic' for variable declaration (i_rst_n).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(6)
+** at ../RTL/TCOR.sv(4): Illegal use of 'automatic' for variable declaration (i_wren).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(6)
+** at ../RTL/TCOR.sv(5): Illegal use of 'automatic' for variable declaration (i_datain).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(6)
+** at ../RTL/TCOR.sv(7): Illegal use of 'automatic' for variable declaration (o_dataout).
+** Error: (vlog-13069) ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(13)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_cfg_env.sv(13): near "class": syntax error, unexpected class.
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(13)
+** at /home/nhat/Veron_VIP/vip_lib/apb/agent/apb_cfg.sv(13): (vlog-13205) Syntax error found in the scope following 'a'. Is there a missing '::'?
+-- Compiling module low_level_detector
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(13)
+** at ../RTL/low_level_detector.sv(2): Illegal use of 'automatic' for variable declaration (i_rst_n).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(13)
+** at ../RTL/low_level_detector.sv(3): Illegal use of 'automatic' for variable declaration (i_clk).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(13)
+** at ../RTL/low_level_detector.sv(4): Illegal use of 'automatic' for variable declaration (i_sig_in).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(13)
+** at ../RTL/low_level_detector.sv(6): Illegal use of 'automatic' for variable declaration (o_low_detect).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(13)
+** at ../RTL/low_level_detector.sv(8): Illegal use of 'automatic' for variable declaration (tempQ1).
+** Error: (vlog-13069) ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(14)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_system_env.sv(1): near "uvm_env": syntax error, unexpected IDENTIFIER.
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(14)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_system_env.sv(1): Error in class extension specification.
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(14)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_system_env.sv(2): Illegal use of 'automatic' for variable declaration (i_rst_n).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(14)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_system_env.sv(3): Illegal use of 'automatic' for variable declaration (i_clk).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(14)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_system_env.sv(6): Illegal use of 'automatic' for variable declaration (i_clk_phi_2).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(14)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_system_env.sv(7): Illegal use of 'automatic' for variable declaration (i_clk_phi_8).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(14)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_system_env.sv(8): Illegal use of 'automatic' for variable declaration (i_clk_phi_32).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(14)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_system_env.sv(9): Illegal use of 'automatic' for variable declaration (i_clk_phi_64).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(14)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_system_env.sv(10): Illegal use of 'automatic' for variable declaration (i_clk_phi_1024).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(14)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_system_env.sv(11): Illegal use of 'automatic' for variable declaration (i_clk_phi_8192).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(14)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_system_env.sv(14): Illegal use of 'automatic' for variable declaration (i_TMCI0).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(14)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_system_env.sv(15): Illegal use of 'automatic' for variable declaration (i_TMCI1).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(14)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_system_env.sv(16): Illegal use of 'automatic' for variable declaration (i_overflow1).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(14)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_system_env.sv(17): Illegal use of 'automatic' for variable declaration (i_comp_match_A0).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(14)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_system_env.sv(20): Illegal use of 'automatic' for variable declaration (i_cks_0).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(14)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_system_env.sv(21): Illegal use of 'automatic' for variable declaration (i_icks_0).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(14)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_system_env.sv(22): Illegal use of 'automatic' for variable declaration (i_cks_1).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(14)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_system_env.sv(23): Illegal use of 'automatic' for variable declaration (i_icks_1).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(14)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_system_env.sv(24): Illegal use of 'automatic' for variable declaration (o_TCNT_EN_0).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(14)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_system_env.sv(26): Illegal use of 'automatic' for variable declaration (o_TCNT_EN_1).
+** Error: ** while parsing file included at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(14)
+** at /home/nhat/Veron_VIP/vip_lib/apb/env/apb_system_env.sv(28): Illegal use of 'automatic' for variable declaration (comp_match_A0_final).
+** Error: (vlog-13069) /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(16): near "endpackage": syntax error, unexpected "SystemVerilog keyword 'endpackage'", expecting class.
+** Error: ../RTL/wait_state_shift_reg.sv(4): Illegal use of 'automatic' for variable declaration (PCLK).
+** Error: ../RTL/wait_state_shift_reg.sv(5): Illegal use of 'automatic' for variable declaration (PRESETn).
+** Error: ../RTL/wait_state_shift_reg.sv(6): Illegal use of 'automatic' for variable declaration (PENABLE).
+** Error: ../RTL/wait_state_shift_reg.sv(7): Illegal use of 'automatic' for variable declaration (access).
+** Error: ../RTL/wait_state_shift_reg.sv(8): Illegal use of 'automatic' for variable declaration (wait_counter).
+** Error: ../RTL/wait_state_shift_reg.sv(10): Illegal use of 'automatic' for variable declaration (PREADY).
+** Error: /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(17): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: ../RTL/TCNT.sv(2): Illegal use of 'automatic' for variable declaration (i_clk_sys).
+** Error: ../RTL/TCNT.sv(3): Illegal use of 'automatic' for variable declaration (i_rst_n).
+** Error: ../RTL/TCNT.sv(4): Illegal use of 'automatic' for variable declaration (i_clr).
+** Error: ../RTL/TCNT.sv(5): Illegal use of 'automatic' for variable declaration (i_wren).
+** Error: ../RTL/TCNT.sv(6): Illegal use of 'automatic' for variable declaration (counter_clock).
+** Error: ../RTL/TCNT.sv(7): Illegal use of 'automatic' for variable declaration (i_datain).
+** Error: ../RTL/TCNT.sv(8): Illegal use of 'automatic' for variable declaration (o_OVF).
+** Error: ../RTL/TCNT.sv(10): Illegal use of 'automatic' for variable declaration (o_count).
+** Error: ../RTL/TCNT.sv(13): Illegal use of 'automatic' for variable declaration (counter_temp).
+** Error: ../RTL/TCNT.sv(48): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: ../RTL/TCR.sv(2): Illegal use of 'automatic' for variable declaration (i_clk_sys).
+** Error: ../RTL/TCR.sv(3): Illegal use of 'automatic' for variable declaration (i_rst_n).
+** Error: ../RTL/TCR.sv(4): Illegal use of 'automatic' for variable declaration (i_wren).
+** Error: ../RTL/TCR.sv(5): Illegal use of 'automatic' for variable declaration (i_datain).
+** Error: ../RTL/TCR.sv(7): Illegal use of 'automatic' for variable declaration (o_dataout).
+** Error: ../RTL/TCR.sv(21): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: ../RTL/Timer_register.sv(3): Illegal use of 'automatic' for variable declaration (i_clk_sys).
+** Error: ../RTL/Timer_register.sv(4): Illegal use of 'automatic' for variable declaration (i_rst_n).
+** Error: ../RTL/Timer_register.sv(5): Illegal use of 'automatic' for variable declaration (i_wren).
+** Error: ../RTL/Timer_register.sv(6): Illegal use of 'automatic' for variable declaration (i_addr).
+** Error: ../RTL/Timer_register.sv(7): Illegal use of 'automatic' for variable declaration (i_datain).
+** Error: ../RTL/Timer_register.sv(9): Illegal use of 'automatic' for variable declaration (i_DISEL_n).
+** Error: ../RTL/Timer_register.sv(10): Illegal use of 'automatic' for variable declaration (i_DTC_A).
+** Error: ../RTL/Timer_register.sv(11): Illegal use of 'automatic' for variable declaration (i_DTC_B).
+** Error: ../RTL/Timer_register.sv(13): Illegal use of 'automatic' for variable declaration (i_comp_match_A0_final).
+** Error: ../RTL/Timer_register.sv(14): Illegal use of 'automatic' for variable declaration (i_comp_match_B0_final).
+** Error: ../RTL/Timer_register.sv(15): Illegal use of 'automatic' for variable declaration (i_CLR_TCNT).
+** Error: ../RTL/Timer_register.sv(16): Illegal use of 'automatic' for variable declaration (i_counter_clock).
+** Error: ../RTL/Timer_register.sv(17): Illegal use of 'automatic' for variable declaration (o_OVF_0).
+** Error: ../RTL/Timer_register.sv(18): Illegal use of 'automatic' for variable declaration (o_CMA_0).
+** Error: ../RTL/Timer_register.sv(19): Illegal use of 'automatic' for variable declaration (o_CMB_0).
+** Error: ../RTL/Timer_register.sv(20): Illegal use of 'automatic' for variable declaration (o_dataout_TCCR_0).
+** Error: ../RTL/Timer_register.sv(21): Illegal use of 'automatic' for variable declaration (o_dataout_TCNT_0).
+** Error: ../RTL/Timer_register.sv(22): Illegal use of 'automatic' for variable declaration (o_dataout_TCR_0).
+** Error: ../RTL/Timer_register.sv(23): Illegal use of 'automatic' for variable declaration (o_dataout_TCSR_0).
+** Error: ../RTL/Timer_register.sv(24): Illegal use of 'automatic' for variable declaration (o_dataout_TCORA_0).
+** Error: ../RTL/Timer_register.sv(25): Illegal use of 'automatic' for variable declaration (o_dataout_TCORB_0).
+** Error: ../RTL/Timer_register.sv(27): Illegal use of 'automatic' for variable declaration (o_OVF_1).
+** Error: ../RTL/Timer_register.sv(28): Illegal use of 'automatic' for variable declaration (o_CMA_1).
+** Error: ../RTL/Timer_register.sv(29): Illegal use of 'automatic' for variable declaration (o_CMB_1).
+** Error: ../RTL/Timer_register.sv(30): Illegal use of 'automatic' for variable declaration (o_dataout_TCCR_1).
+** Error: ../RTL/Timer_register.sv(31): Illegal use of 'automatic' for variable declaration (o_dataout_TCNT_1).
+** Error: ../RTL/Timer_register.sv(32): Illegal use of 'automatic' for variable declaration (o_dataout_TCR_1).
+** Error: ../RTL/Timer_register.sv(33): Illegal use of 'automatic' for variable declaration (o_dataout_TCSR_1).
+** Error: ../RTL/Timer_register.sv(34): Illegal use of 'automatic' for variable declaration (o_dataout_TCORA_1).
+** Error: ../RTL/Timer_register.sv(36): Illegal use of 'automatic' for variable declaration (o_dataout_TCORB_1).
+** Error: ../RTL/Timer_register.sv(214): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: ../RTL/priority_encoder.sv(2): Illegal use of 'automatic' for variable declaration (i_os0).
+** Error: ../RTL/priority_encoder.sv(3): Illegal use of 'automatic' for variable declaration (i_os1).
+** Error: ../RTL/priority_encoder.sv(4): Illegal use of 'automatic' for variable declaration (i_os2).
+** Error: ../RTL/priority_encoder.sv(5): Illegal use of 'automatic' for variable declaration (i_os3).
+** Error: ../RTL/priority_encoder.sv(6): Illegal use of 'automatic' for variable declaration (o_y0).
+** Error: ../RTL/priority_encoder.sv(8): Illegal use of 'automatic' for variable declaration (o_y1).
+** Error: ../RTL/priority_encoder.sv(14): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: ../RTL/TCSR.sv(2): Illegal use of 'automatic' for variable declaration (i_clk_sys).
+** Error: ../RTL/TCSR.sv(3): Illegal use of 'automatic' for variable declaration (i_rst_n).
+** Error: ../RTL/TCSR.sv(4): Illegal use of 'automatic' for variable declaration (i_wren).
+** Error: ../RTL/TCSR.sv(5): Illegal use of 'automatic' for variable declaration (i_overflow).
+** Error: ../RTL/TCSR.sv(6): Illegal use of 'automatic' for variable declaration (i_CMA).
+** Error: ../RTL/TCSR.sv(7): Illegal use of 'automatic' for variable declaration (i_CMB).
+** Error: ../RTL/TCSR.sv(8): Illegal use of 'automatic' for variable declaration (i_DISEL_n).
+** Error: ../RTL/TCSR.sv(9): Illegal use of 'automatic' for variable declaration (i_DTC_A).
+** Error: ../RTL/TCSR.sv(10): Illegal use of 'automatic' for variable declaration (i_DTC_B).
+** Error: ../RTL/TCSR.sv(11): Illegal use of 'automatic' for variable declaration (i_datain).
+** Error: ../RTL/TCSR.sv(13): Illegal use of 'automatic' for variable declaration (o_dataout).
+** Error: ../RTL/TCSR.sv(16): Illegal use of 'automatic' for variable declaration (CMFB_i).
+** Error: ../RTL/TCSR.sv(122): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: ../RTL/timer_top.sv(6): Illegal use of 'automatic' for variable declaration (i_clk_sys).
+** Error: ../RTL/timer_top.sv(7): Illegal use of 'automatic' for variable declaration (i_rst_n).
+** Error: ../RTL/timer_top.sv(10): Illegal use of 'automatic' for variable declaration (i_clk_phi_2).
+** Error: ../RTL/timer_top.sv(11): Illegal use of 'automatic' for variable declaration (i_clk_phi_8).
+** Error: ../RTL/timer_top.sv(12): Illegal use of 'automatic' for variable declaration (i_clk_phi_32).
+** Error: ../RTL/timer_top.sv(13): Illegal use of 'automatic' for variable declaration (i_clk_phi_64).
+** Error: ../RTL/timer_top.sv(14): Illegal use of 'automatic' for variable declaration (i_clk_phi_1024).
+** Error: ../RTL/timer_top.sv(15): Illegal use of 'automatic' for variable declaration (i_clk_phi_8192).
+** Error: ../RTL/timer_top.sv(16): Illegal use of 'automatic' for variable declaration (i_TMCI0).
+** Error: ../RTL/timer_top.sv(17): Illegal use of 'automatic' for variable declaration (i_TMCI1).
+** Error: ../RTL/timer_top.sv(20): Illegal use of 'automatic' for variable declaration (i_TMRI_0).
+** Error: ../RTL/timer_top.sv(21): Illegal use of 'automatic' for variable declaration (i_TMRI_1).
+** Error: ../RTL/timer_top.sv(24): Illegal use of 'automatic' for variable declaration (i_wren).
+** Error: ../RTL/timer_top.sv(25): Illegal use of 'automatic' for variable declaration (i_addr).
+** Error: ../RTL/timer_top.sv(26): Illegal use of 'automatic' for variable declaration (i_datain).
+** Error: ../RTL/timer_top.sv(27): Illegal use of 'automatic' for variable declaration (i_DISEL_n).
+** Error: ../RTL/timer_top.sv(28): Illegal use of 'automatic' for variable declaration (i_DTC_A).
+** Error: ../RTL/timer_top.sv(29): Illegal use of 'automatic' for variable declaration (i_DTC_B).
+** Error: ../RTL/timer_top.sv(32): Illegal use of 'automatic' for variable declaration (o_TMO_0).
+** Error: ../RTL/timer_top.sv(33): Illegal use of 'automatic' for variable declaration (o_TMO_1).
+** Error: ../RTL/timer_top.sv(36): Illegal use of 'automatic' for variable declaration (o_CMIA0).
+** Error: ../RTL/timer_top.sv(37): Illegal use of 'automatic' for variable declaration (o_CMIB0).
+** Error: ../RTL/timer_top.sv(38): Illegal use of 'automatic' for variable declaration (o_OVI0).
+** Error: ../RTL/timer_top.sv(39): Illegal use of 'automatic' for variable declaration (o_CMIA1).
+** Error: ../RTL/timer_top.sv(40): Illegal use of 'automatic' for variable declaration (o_CMIB1).
+** Error: ../RTL/timer_top.sv(41): Illegal use of 'automatic' for variable declaration (o_OVI1).
+** Error: ../RTL/timer_top.sv(43): Illegal use of 'automatic' for variable declaration (o_adc_request).
+** Error: ../RTL/timer_top.sv(47): Illegal use of 'automatic' for variable declaration (o_mux_reg_to_bus_out).
+** Error: ../RTL/timer_top.sv(49): Illegal use of 'automatic' for variable declaration (Overflow_0).
+** Error: ../RTL/timer_top.sv(251): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: ../RTL/TCCR.sv(2): Illegal use of 'automatic' for variable declaration (i_clk_sys).
+** Error: ../RTL/TCCR.sv(3): Illegal use of 'automatic' for variable declaration (i_rst_n).
+** Error: ../RTL/TCCR.sv(4): Illegal use of 'automatic' for variable declaration (i_wren).
+** Error: ../RTL/TCCR.sv(5): Illegal use of 'automatic' for variable declaration (i_datain).
+** Error: ../RTL/TCCR.sv(7): Illegal use of 'automatic' for variable declaration (o_dataout).
+** Error: ../RTL/TCCR.sv(9): Illegal use of 'automatic' for variable declaration (data_i_TCCR).
+** Error: ../RTL/TCCR.sv(24): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: ../RTL/COMP.sv(2): Illegal use of 'automatic' for variable declaration (i_wren).
+** Error: ../RTL/COMP.sv(3): Illegal use of 'automatic' for variable declaration (i_data_comp_A).
+** Error: ../RTL/COMP.sv(4): Illegal use of 'automatic' for variable declaration (i_data_comp_B).
+** Error: ../RTL/COMP.sv(6): Illegal use of 'automatic' for variable declaration (o_data_comp).
+** Error: ../RTL/COMP.sv(8): Illegal use of 'automatic' for variable declaration (match_flag).
+** Error: ../RTL/COMP.sv(14): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: ../RTL/negedge_detector.sv(2): Illegal use of 'automatic' for variable declaration (i_rst_n).
+** Error: ../RTL/negedge_detector.sv(3): Illegal use of 'automatic' for variable declaration (i_clk).
+** Error: ../RTL/negedge_detector.sv(4): Illegal use of 'automatic' for variable declaration (i_sig_in).
+** Error: ../RTL/negedge_detector.sv(6): Illegal use of 'automatic' for variable declaration (o_negedge_detect).
+** Error: ../RTL/negedge_detector.sv(9): Illegal use of 'automatic' for variable declaration (tempQ1).
+** Error: ../RTL/negedge_detector.sv(53): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: ../RTL/apb_master_byte_masking.sv(5): Illegal use of 'automatic' for variable declaration (pstrb_byte_mask).
+** Error: ../RTL/apb_master_byte_masking.sv(6): Illegal use of 'automatic' for variable declaration (apb_write_data).
+** Error: ../RTL/apb_master_byte_masking.sv(7): Illegal use of 'automatic' for variable declaration (PRDATA).
+** Error: ../RTL/apb_master_byte_masking.sv(9): Illegal use of 'automatic' for variable declaration (PWDATA).
+** Error: ../RTL/apb_master_byte_masking.sv(11): Illegal use of 'automatic' for variable declaration (i).
+** Error: ../RTL/apb_master_byte_masking.sv(26): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: ../RTL/pos_det_mode16.sv(2): Illegal use of 'automatic' for variable declaration (i_rst_n).
+** Error: ../RTL/pos_det_mode16.sv(3): Illegal use of 'automatic' for variable declaration (i_clk).
+** Error: ../RTL/pos_det_mode16.sv(4): Illegal use of 'automatic' for variable declaration (i_sig_in).
+** Error: ../RTL/pos_det_mode16.sv(6): Illegal use of 'automatic' for variable declaration (o_posedge_detect).
+** Error: ../RTL/pos_det_mode16.sv(9): Illegal use of 'automatic' for variable declaration (tempQ1).
+** Error: ../RTL/pos_det_mode16.sv(41): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: ../RTL/mux_2_to_1.sv(4): Illegal use of 'automatic' for variable declaration (in0).
+** Error: ../RTL/mux_2_to_1.sv(5): Illegal use of 'automatic' for variable declaration (in1).
+** Error: ../RTL/mux_2_to_1.sv(6): Illegal use of 'automatic' for variable declaration (sel).
+** Error: ../RTL/mux_2_to_1.sv(8): Illegal use of 'automatic' for variable declaration (out).
+** Error: ../RTL/mux_2_to_1.sv(13): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: ../RTL/control_logic.sv(6): Illegal use of 'automatic' for variable declaration (i_clk).
+** Error: ../RTL/control_logic.sv(7): Illegal use of 'automatic' for variable declaration (i_rst_n).
+** Error: ../RTL/control_logic.sv(9): Illegal use of 'automatic' for variable declaration (TCORA_1).
+** Error: ../RTL/control_logic.sv(10): Illegal use of 'automatic' for variable declaration (TCORB_1).
+** Error: ../RTL/control_logic.sv(11): Illegal use of 'automatic' for variable declaration (Compare_match_A1).
+** Error: ../RTL/control_logic.sv(12): Illegal use of 'automatic' for variable declaration (Compare_match_B1).
+** Error: ../RTL/control_logic.sv(13): Illegal use of 'automatic' for variable declaration (i_os0_1).
+** Error: ../RTL/control_logic.sv(14): Illegal use of 'automatic' for variable declaration (i_os1_1).
+** Error: ../RTL/control_logic.sv(15): Illegal use of 'automatic' for variable declaration (i_os2_1).
+** Error: ../RTL/control_logic.sv(16): Illegal use of 'automatic' for variable declaration (i_os3_1).
+** Error: ../RTL/control_logic.sv(18): Illegal use of 'automatic' for variable declaration (TCORA_0).
+** Error: ../RTL/control_logic.sv(19): Illegal use of 'automatic' for variable declaration (TCORB_0).
+** Error: ../RTL/control_logic.sv(20): Illegal use of 'automatic' for variable declaration (Compare_match_A0).
+** Error: ../RTL/control_logic.sv(21): Illegal use of 'automatic' for variable declaration (Compare_match_B0).
+** Error: ../RTL/control_logic.sv(22): Illegal use of 'automatic' for variable declaration (i_os0_0).
+** Error: ../RTL/control_logic.sv(23): Illegal use of 'automatic' for variable declaration (i_os1_0).
+** Error: ../RTL/control_logic.sv(24): Illegal use of 'automatic' for variable declaration (i_os2_0).
+** Error: ../RTL/control_logic.sv(25): Illegal use of 'automatic' for variable declaration (i_os3_0).
+** Error: ../RTL/control_logic.sv(27): Illegal use of 'automatic' for variable declaration (i_cks0_0).
+** Error: ../RTL/control_logic.sv(28): Illegal use of 'automatic' for variable declaration (i_cks1_0).
+** Error: ../RTL/control_logic.sv(29): Illegal use of 'automatic' for variable declaration (i_cks2_0).
+** Error: ../RTL/control_logic.sv(31): Illegal use of 'automatic' for variable declaration (i_counter_clock_1).
+** Error: ../RTL/control_logic.sv(32): Illegal use of 'automatic' for variable declaration (i_tmris_1).
+** Error: ../RTL/control_logic.sv(33): Illegal use of 'automatic' for variable declaration (i_cclr0_1).
+** Error: ../RTL/control_logic.sv(34): Illegal use of 'automatic' for variable declaration (i_cclr1_1).
+** Error: ../RTL/control_logic.sv(35): Illegal use of 'automatic' for variable declaration (TMRI_1).
+** Error: ../RTL/control_logic.sv(37): Illegal use of 'automatic' for variable declaration (i_counter_clock_0).
+** Error: ../RTL/control_logic.sv(38): Illegal use of 'automatic' for variable declaration (i_tmris_0).
+** Error: ../RTL/control_logic.sv(39): Illegal use of 'automatic' for variable declaration (i_cclr0_0).
+** Error: ../RTL/control_logic.sv(40): Illegal use of 'automatic' for variable declaration (i_cclr1_0).
+** Error: ../RTL/control_logic.sv(41): Illegal use of 'automatic' for variable declaration (TMRI_0).
+** Error: ../RTL/control_logic.sv(43): Illegal use of 'automatic' for variable declaration (i_cmfa_0).
+** Error: ../RTL/control_logic.sv(44): Illegal use of 'automatic' for variable declaration (i_cmfb_0).
+** Error: ../RTL/control_logic.sv(45): Illegal use of 'automatic' for variable declaration (i_ovf_0).
+** Error: ../RTL/control_logic.sv(46): Illegal use of 'automatic' for variable declaration (i_cmfa_1).
+** Error: ../RTL/control_logic.sv(47): Illegal use of 'automatic' for variable declaration (i_cmfb_1).
+** Error: ../RTL/control_logic.sv(48): Illegal use of 'automatic' for variable declaration (i_ovf_1).
+** Error: ../RTL/control_logic.sv(49): Illegal use of 'automatic' for variable declaration (i_cmiea_0).
+** Error: ../RTL/control_logic.sv(50): Illegal use of 'automatic' for variable declaration (i_cmieb_0).
+** Error: ../RTL/control_logic.sv(51): Illegal use of 'automatic' for variable declaration (i_ovie_0).
+** Error: ../RTL/control_logic.sv(52): Illegal use of 'automatic' for variable declaration (i_cmiea_1).
+** Error: ../RTL/control_logic.sv(53): Illegal use of 'automatic' for variable declaration (i_cmieb_1).
+** Error: ../RTL/control_logic.sv(54): Illegal use of 'automatic' for variable declaration (i_ovie_1).
+** Error: ../RTL/control_logic.sv(56): Illegal use of 'automatic' for variable declaration (i_adte).
+** Error: ../RTL/control_logic.sv(61): Illegal use of 'automatic' for variable declaration (o_compare_match_A0_final).
+** Error: ../RTL/control_logic.sv(62): Illegal use of 'automatic' for variable declaration (o_compare_match_B0_final).
+** Error: ../RTL/control_logic.sv(64): Illegal use of 'automatic' for variable declaration (TMO_1).
+** Error: ../RTL/control_logic.sv(65): Illegal use of 'automatic' for variable declaration (TMO_0).
+** Error: ../RTL/control_logic.sv(67): Illegal use of 'automatic' for variable declaration (o_clr_tcnt_0).
+** Error: ../RTL/control_logic.sv(68): Illegal use of 'automatic' for variable declaration (o_clr_tcnt_1).
+** Error: ../RTL/control_logic.sv(70): Illegal use of 'automatic' for variable declaration (CMIA0).
+** Error: ../RTL/control_logic.sv(71): Illegal use of 'automatic' for variable declaration (CMIB0).
+** Error: ../RTL/control_logic.sv(72): Illegal use of 'automatic' for variable declaration (OVI0).
+** Error: ../RTL/control_logic.sv(73): Illegal use of 'automatic' for variable declaration (CMIA1).
+** Error: ../RTL/control_logic.sv(74): Illegal use of 'automatic' for variable declaration (CMIB1).
+** Error: ../RTL/control_logic.sv(75): Illegal use of 'automatic' for variable declaration (OVI1).
+** Error: ../RTL/control_logic.sv(78): Illegal use of 'automatic' for variable declaration (o_adc_request).
+** Error: ../RTL/control_logic.sv(84): Illegal use of 'automatic' for variable declaration (mode_16_en).
+** Error: ../RTL/control_logic.sv(424): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Warning: ../RTL/param_mux.sv(6): (vlog-13314) Defaulting port 'in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+** Error: ../RTL/param_mux.sv(6): Illegal use of 'automatic' for variable declaration (in).
+** Error: ../RTL/param_mux.sv(7): Illegal use of 'automatic' for variable declaration (sel).
+** Error: ../RTL/param_mux.sv(9): Illegal use of 'automatic' for variable declaration (y).
+** Error: ../RTL/param_mux.sv(14): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: ../RTL/high_level_detector.sv(2): Illegal use of 'automatic' for variable declaration (i_rst_n).
+** Error: ../RTL/high_level_detector.sv(3): Illegal use of 'automatic' for variable declaration (i_clk).
+** Error: ../RTL/high_level_detector.sv(4): Illegal use of 'automatic' for variable declaration (i_sig_in).
+** Error: ../RTL/high_level_detector.sv(6): Illegal use of 'automatic' for variable declaration (o_high_detect).
+** Error: ../RTL/high_level_detector.sv(8): Illegal use of 'automatic' for variable declaration (tempQ1).
+** Error: ../RTL/high_level_detector.sv(39): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: ../RTL/posedge_detector.sv(2): Illegal use of 'automatic' for variable declaration (i_rst_n).
+** Error: ../RTL/posedge_detector.sv(3): Illegal use of 'automatic' for variable declaration (i_clk).
+** Error: ../RTL/posedge_detector.sv(4): Illegal use of 'automatic' for variable declaration (i_sig_in).
+** Error: ../RTL/posedge_detector.sv(6): Illegal use of 'automatic' for variable declaration (o_posedge_detect).
+** Error: ../RTL/posedge_detector.sv(9): Illegal use of 'automatic' for variable declaration (tempQ1).
+** Error: ../RTL/posedge_detector.sv(53): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: ../RTL/clk_sel_channel.sv(2): Illegal use of 'automatic' for variable declaration (i_rst_n).
+** Error: ../RTL/clk_sel_channel.sv(3): Illegal use of 'automatic' for variable declaration (i_clk).
+** Error: ../RTL/clk_sel_channel.sv(6): Illegal use of 'automatic' for variable declaration (i_clk_phi_2).
+** Error: ../RTL/clk_sel_channel.sv(7): Illegal use of 'automatic' for variable declaration (i_clk_phi_8).
+** Error: ../RTL/clk_sel_channel.sv(8): Illegal use of 'automatic' for variable declaration (i_clk_phi_32).
+** Error: ../RTL/clk_sel_channel.sv(9): Illegal use of 'automatic' for variable declaration (i_clk_phi_64).
+** Error: ../RTL/clk_sel_channel.sv(10): Illegal use of 'automatic' for variable declaration (i_clk_phi_1024).
+** Error: ../RTL/clk_sel_channel.sv(11): Illegal use of 'automatic' for variable declaration (i_clk_phi_8192).
+** Error: ../RTL/clk_sel_channel.sv(14): Illegal use of 'automatic' for variable declaration (i_TMCI).
+** Error: ../RTL/clk_sel_channel.sv(15): Illegal use of 'automatic' for variable declaration (i_cascaded_signal).
+** Error: ../RTL/clk_sel_channel.sv(18): Illegal use of 'automatic' for variable declaration (i_cks).
+** Error: ../RTL/clk_sel_channel.sv(19): Illegal use of 'automatic' for variable declaration (i_icks).
+** Error: ../RTL/clk_sel_channel.sv(22): Illegal use of 'automatic' for variable declaration (o_TCNT_EN).
+** Error: ../RTL/clk_sel_channel.sv(25): Illegal use of 'automatic' for variable declaration (CLK_internal).
+** Error: ../RTL/clk_sel_channel.sv(108): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: ../RTL/apb_register.sv(4): Illegal use of 'automatic' for variable declaration (clk).
+** Error: ../RTL/apb_register.sv(5): Illegal use of 'automatic' for variable declaration (rst_n).
+** Error: ../RTL/apb_register.sv(6): Illegal use of 'automatic' for variable declaration (en).
+** Error: ../RTL/apb_register.sv(7): Illegal use of 'automatic' for variable declaration (d).
+** Error: ../RTL/apb_register.sv(9): Illegal use of 'automatic' for variable declaration (q).
+** Error: ../RTL/apb_register.sv(21): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: ../RTL/apb_slave_timer.sv(9): Illegal use of 'automatic' for variable declaration (PCLK).
+** Error: ../RTL/apb_slave_timer.sv(10): Illegal use of 'automatic' for variable declaration (PRESETn).
+** Error: ../RTL/apb_slave_timer.sv(11): Illegal use of 'automatic' for variable declaration (PSEL).
+** Error: ../RTL/apb_slave_timer.sv(12): Illegal use of 'automatic' for variable declaration (PENABLE).
+** Error: ../RTL/apb_slave_timer.sv(13): Illegal use of 'automatic' for variable declaration (PWRITE).
+** Error: ../RTL/apb_slave_timer.sv(14): Illegal use of 'automatic' for variable declaration (PADDR).
+** Error: ../RTL/apb_slave_timer.sv(15): Illegal use of 'automatic' for variable declaration (PWDATA).
+** Error: ../RTL/apb_slave_timer.sv(16): Illegal use of 'automatic' for variable declaration (PSTRB).
+** Error: ../RTL/apb_slave_timer.sv(17): Illegal use of 'automatic' for variable declaration (PSTRBCHK).
+** Error: ../RTL/apb_slave_timer.sv(18): Illegal use of 'automatic' for variable declaration (PADDRCHK).
+** Error: ../RTL/apb_slave_timer.sv(19): Illegal use of 'automatic' for variable declaration (PWDATACHK).
+** Error: ../RTL/apb_slave_timer.sv(20): Illegal use of 'automatic' for variable declaration (i_clk_phi_2).
+** Error: ../RTL/apb_slave_timer.sv(21): Illegal use of 'automatic' for variable declaration (i_clk_phi_8).
+** Error: ../RTL/apb_slave_timer.sv(22): Illegal use of 'automatic' for variable declaration (i_clk_phi_32).
+** Error: ../RTL/apb_slave_timer.sv(23): Illegal use of 'automatic' for variable declaration (i_clk_phi_64).
+** Error: ../RTL/apb_slave_timer.sv(24): Illegal use of 'automatic' for variable declaration (i_clk_phi_1024).
+** Error: ../RTL/apb_slave_timer.sv(25): Illegal use of 'automatic' for variable declaration (i_clk_phi_8192).
+** Error: ../RTL/apb_slave_timer.sv(26): Illegal use of 'automatic' for variable declaration (i_TMCI0).
+** Error: ../RTL/apb_slave_timer.sv(27): Illegal use of 'automatic' for variable declaration (i_TMCI1).
+** Error: ../RTL/apb_slave_timer.sv(28): Illegal use of 'automatic' for variable declaration (i_TMRI_0).
+** Error: ../RTL/apb_slave_timer.sv(29): Illegal use of 'automatic' for variable declaration (i_TMRI_1).
+** Error: ../RTL/apb_slave_timer.sv(34): Illegal use of 'automatic' for variable declaration (o_TMO_0).
+** Error: ../RTL/apb_slave_timer.sv(35): Illegal use of 'automatic' for variable declaration (o_TMO_1).
+** Error: ../RTL/apb_slave_timer.sv(36): Illegal use of 'automatic' for variable declaration (o_CMIA0).
+** Error: ../RTL/apb_slave_timer.sv(37): Illegal use of 'automatic' for variable declaration (o_CMIB0).
+** Error: ../RTL/apb_slave_timer.sv(38): Illegal use of 'automatic' for variable declaration (o_OVI0).
+** Error: ../RTL/apb_slave_timer.sv(39): Illegal use of 'automatic' for variable declaration (o_CMIA1).
+** Error: ../RTL/apb_slave_timer.sv(40): Illegal use of 'automatic' for variable declaration (o_CMIB1).
+** Error: ../RTL/apb_slave_timer.sv(41): Illegal use of 'automatic' for variable declaration (o_OVI1).
+** Error: ../RTL/apb_slave_timer.sv(42): Illegal use of 'automatic' for variable declaration (o_adc_request).
+** Error: ../RTL/apb_slave_timer.sv(43): Illegal use of 'automatic' for variable declaration (PREADY).
+** Error: ../RTL/apb_slave_timer.sv(44): Illegal use of 'automatic' for variable declaration (PSLVERR).
+** Error: ../RTL/apb_slave_timer.sv(45): Illegal use of 'automatic' for variable declaration (PRDATA).
+** Error: ../RTL/apb_slave_timer.sv(47): Illegal use of 'automatic' for variable declaration (PRDATACHK).
+** Error: ../RTL/apb_slave_timer.sv(50): Illegal use of 'automatic' for variable declaration (i).
+** Error: ../RTL/apb_slave_timer.sv(52): Illegal use of 'automatic' for variable declaration (paddr_parity_bit).
+** Error: ../RTL/apb_slave_timer.sv(310): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: ../RTL/comparator.sv(2): Illegal use of 'automatic' for variable declaration (i_tcora_0).
+** Error: ../RTL/comparator.sv(3): Illegal use of 'automatic' for variable declaration (i_tcora_1).
+** Error: ../RTL/comparator.sv(4): Illegal use of 'automatic' for variable declaration (i_tcorb_0).
+** Error: ../RTL/comparator.sv(5): Illegal use of 'automatic' for variable declaration (i_tcorb_1).
+** Error: ../RTL/comparator.sv(7): Illegal use of 'automatic' for variable declaration (o_final_comp).
+** Error: ../RTL/comparator.sv(12): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: ../RTL/param_d_ff.sv(5): Illegal use of 'automatic' for variable declaration (i_clk).
+** Error: ../RTL/param_d_ff.sv(6): Illegal use of 'automatic' for variable declaration (i_rst_n).
+** Error: ../RTL/param_d_ff.sv(7): Illegal use of 'automatic' for variable declaration (i_en).
+** Error: ../RTL/param_d_ff.sv(8): Illegal use of 'automatic' for variable declaration (d).
+** Error: ../RTL/param_d_ff.sv(10): Illegal use of 'automatic' for variable declaration (q).
+** Error: ../RTL/param_d_ff.sv(25): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: ../tb/testbench.sv(2): Cannot find `include file "common.svh" in directories:
+    /opt/questasim/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /opt/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src
+** Note: (vlog-2286) ../tb/testbench.sv(3): Using implicit +incdir+/opt/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+** Error: ../tb/testbench.sv(4): Cannot find `include file "apb_pkg.sv" in directories:
+    /opt/questasim/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /opt/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src
+** Error: ../tb/testbench.sv(5): Cannot find `include file "apb_if.sv" in directories:
+    /opt/questasim/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /opt/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src
+** Error: ../tb/testbench.sv(10): (vlog-13006) Could not find the package (apb_pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+** Error: ../tb/testbench.sv(12): Illegal use of 'automatic' for variable declaration (PCLK).
+** Error: ../tb/testbench.sv(74): End of source encountered before closing `ifdef region started at /home/nhat/Veron_VIP/vip_lib/apb/apb_pkg.sv(1).
+** Error: (vlog-13069) ** while parsing file included at ../tests/inc_test.sv(1)
+** at ../tests/base_test.sv(1): near "uvm_test": syntax error, unexpected IDENTIFIER.
+** Error: ** while parsing file included at ../tests/inc_test.sv(1)
+** at ../tests/base_test.sv(1): Error in class extension specification.
+End time: 18:01:21 on Aug 16,2025, Elapsed time: 0:00:00
+Errors: 335, Warnings: 1
