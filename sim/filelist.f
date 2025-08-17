@@ -1,10 +1,14 @@
-$VIP_HOME/vip_lib/apb/common.svh
-$VIP_HOME/vip_lib/apb/apb_if.sv
-$VIP_HOME/vip_lib/apb/apb_pkg.sv
++incdir+../RTL 
++incdir+/home/nhat/Veron_VIP/vip_lib/apb
++incdir+/home/nhat/Veron_VIP/vip_lib/apb/env
++incdir+/home/nhat/Veron_VIP/vip_lib/apb/agent 
++incdir+../seq 
++incdir+../tests 
++incdir+../interface 
++incdir+../env 
 
-../RTL/*.sv
-
-../tb/testbench.sv
-
+/home/nhat/Veron_VIP/vip_lib/apb/common.svh
+../RTL/*.sv 
+../tb/testbench.sv 
 ../tests/inc_test.sv
 

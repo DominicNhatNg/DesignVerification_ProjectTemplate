@@ -1,3 +1,7 @@
+`include "uvm_macros.svh"
+`include "apb_pkg.sv"
+import uvm_pkg::*;
+import apb_pkg::*;
 class base_test extends uvm_test;
 
     `uvm_component_utils(base_test)
@@ -7,8 +11,10 @@ class base_test extends uvm_test;
     *   and interface for that protocol
     * */
 
- //  apb_env apb_environment;
+   apb_env apb_environment;
    virtual apb_if apb_vif;
+
+   apb_env_config   env_cfg;
 
 
     //// config
@@ -24,6 +30,7 @@ class base_test extends uvm_test;
         if(!uvm_config_db #(virtual apb_if)::get(this, "", "apb_vif", apb_vif))
             `uvm_fatal(get_type_name(), "Cannot get interface at base_test")
 
+        uvm_config_db #(apb_env_config) :: set(this, "apb_environment", "env_cfg", env_cfg);
         ///// config
     endfunction
 

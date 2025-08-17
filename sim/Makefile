@@ -54,11 +54,19 @@ build:
 	mkdir -p $(LOG_DIR)
 	vlib work
 	vmap work work
-	vlog +define+UVM_NO_DPI +cover=bcesft +acc -sv -f filelist.f \
-		+define+APB_MAX_DATA_WIDTH=8 \
+	vlog -mfcu \
+		+define+UVM_NO_DPI +cover=bcesft \
+		-suppress 2181 \
+		+acc -sv -f filelist.f \
 		+define+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR | tee compile.log
 
 run:
+	@echo "[SIM] Running UVM test: $(TESTNAME)"
+	mkdir -p $(LOG_DIR) $(WAVE_DIR)
+	vsim -c -voptargs=+acc -assertdebug -debugDB -l $(LOG_DIR)/$(TESTNAME).log $(TOP) \
+	     -wlf $(WAVE_DIR)/$(TESTNAME).wlf \
+	     -do "log -r /*; run -all; quit" \
+	     +UVM_TESTNAME=$(TESTNAME)
 
 
 clean:
