@@ -50,24 +50,30 @@ all: clean build
 #-----------------------------
 
 build:
-	@echo "[BUILD] Running UVM Test: $(TESTNAME)"
+	@echo "[BUILD] Compiling UVM Testbench: $(TESTNAME)"
 	mkdir -p $(LOG_DIR)
 	vlib work
 	vmap work work
 	vlog -mfcu \
-		+define+UVM_NO_DPI +cover=bcesft \
+		+incdir+$(UVM_HOME)/src \
+		$(UVM_HOME)/src/uvm.sv \
+		+define+UVM_NO_DPI \
+		+define+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR \
+		+cover=bcesft \
 		-suppress 2181 \
-		+acc -sv -f filelist.f \
-		+define+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR | tee compile.log
+		+acc -sv -f filelist.f | tee $(LOG_DIR)/compile.log
 
-run:
-	@echo "[SIM] Running UVM test: $(TESTNAME)"
+# ======================================================
+# Run in batch mode
+# ======================================================
+run: build
+	@echo "[SIM] Running UVM Test: $(TESTNAME)"
 	mkdir -p $(LOG_DIR) $(WAVE_DIR)
-	vsim -c -voptargs=+acc -assertdebug -debugDB -l $(LOG_DIR)/$(TESTNAME).log $(TOP) \
-	     -wlf $(WAVE_DIR)/$(TESTNAME).wlf \
-	     -do "log -r /*; run -all; quit" \
-	     +UVM_TESTNAME=$(TESTNAME)
-
+	vsim -c -voptargs=+acc -assertdebug -debugDB \
+	    -l $(LOG_DIR)/$(TESTNAME).log $(TOP) \
+	    -wlf $(WAVE_DIR)/$(TESTNAME).wlf \
+	    -do "log -r /*; run -all; quit" \
+	    +UVM_TESTNAME=$(TESTNAME)
 
 clean:
 	@echo "[CLEAN] Cleaning all generated files..."

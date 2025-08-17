@@ -25,17 +25,20 @@ class base_test extends uvm_test;
 
     function void build_phase(uvm_phase phase);
         super.build_phase(phase);
-        apb_environment = apb_env::type_id::create("apb_environment", this);
 
         if(!uvm_config_db #(virtual apb_if)::get(this, "", "apb_vif", apb_vif))
             `uvm_fatal(get_type_name(), "Cannot get interface at base_test")
 
+        env_cfg = apb_env_config::type_id::create("env_cfg");
+        env_cfg.num_slaves = 2;
         uvm_config_db #(apb_env_config) :: set(this, "apb_environment", "env_cfg", env_cfg);
-        ///// config
+        apb_environment = apb_env::type_id::create("apb_environment", this);
+
     endfunction
 
     function void end_of_elaboration();
         print();
+        env_cfg.print();
     endfunction
 
 endclass
