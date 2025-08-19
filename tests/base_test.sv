@@ -33,6 +33,7 @@ class base_test extends uvm_test;
 
         env_cfg = apb_env_config::type_id::create("env_cfg");
         env_cfg.num_slaves = 1;
+        env_cfg.slave_cfgs[0].is_active = 0;
         uvm_config_db #(apb_env_config) :: set(this, "apb_environment", "env_cfg", env_cfg);
         apb_environment = apb_env::type_id::create("apb_environment", this);
 
