@@ -1,33 +1,33 @@
 QuestaSim-64 vlog 2021.2_1 Compiler 2021.05 May 15 2021
-Start time: 22:58:13 on Aug 17,2025
-vlog -mfcu "+incdir+/opt/questasim/uvm-1.2/src" /opt/questasim/uvm-1.2/src/uvm.sv "+define+UVM_NO_DPI" "+define+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR" "+cover=bcesft" -suppress 2181 "+acc" -sv -f filelist.f 
+Start time: 09:57:13 on Aug 19,2025
+vlog -mfcu "+incdir+/home/shared_folder/questasim/uvm-1.2/src" /home/shared_folder/questasim/uvm-1.2/src/uvm.sv "+define+UVM_NO_DPI" "+define+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR" "+UVM_NO_DEPRECATED" "+cover=bcesft" -suppress 2181 "+acc" -sv -f filelist.f 
 -- Compiling package uvm_pkg
--- Compiling module TCOR
--- Compiling module low_level_detector
--- Compiling module clock_select
--- Compiling module wait_state_shift_reg
--- Compiling module TCNT
--- Compiling module TCR
--- Compiling module Timer_register
--- Compiling module priority_encoder
--- Compiling module TCSR
--- Compiling module timer_top
--- Compiling module TCCR
 -- Compiling module COMP
--- Compiling module negedge_detector
+-- Compiling module TCCR
+-- Compiling module TCNT
+-- Compiling module TCOR
+-- Compiling module TCR
+-- Compiling module TCSR
+-- Compiling module Timer_register
 -- Compiling module apb_master_byte_masking
--- Compiling module pos_det_mode16
--- Compiling module mux_2_to_1
--- Compiling module control_logic
--- Compiling module param_mux
-** Warning: ../RTL/param_mux.sv(6): (vlog-13314) Defaulting port 'in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
--- Compiling module high_level_detector
--- Compiling module posedge_detector
--- Compiling module clk_sel_channel
 -- Compiling module apb_register
 -- Compiling module apb_slave_timer
+-- Compiling module clk_sel_channel
+-- Compiling module clock_select
 -- Compiling module comparator
+-- Compiling module control_logic
+-- Compiling module high_level_detector
+-- Compiling module low_level_detector
+-- Compiling module mux_2_to_1
+-- Compiling module negedge_detector
 -- Compiling module param_d_ff
+-- Compiling module param_mux
+** Warning: ../RTL/param_mux.sv(6): (vlog-13314) Defaulting port 'in' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+-- Compiling module pos_det_mode16
+-- Compiling module posedge_detector
+-- Compiling module priority_encoder
+-- Compiling module timer_top
+-- Compiling module wait_state_shift_reg
 -- Compiling interface apb_slave_if
 -- Compiling interface apb_if
 -- Compiling module testbench
@@ -40,5 +40,5 @@ vlog -mfcu "+incdir+/opt/questasim/uvm-1.2/src" /opt/questasim/uvm-1.2/src/uvm.s
 Top level modules:
 	apb_slave_timer
 	testbench
-End time: 22:58:15 on Aug 17,2025, Elapsed time: 0:00:02
+End time: 09:57:14 on Aug 19,2025, Elapsed time: 0:00:01
 Errors: 0, Warnings: 1

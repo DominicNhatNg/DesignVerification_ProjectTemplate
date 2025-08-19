@@ -274,8 +274,6 @@ uvm_config_string
 uvm_pkg::uvm_reg_bd_cb
 29 23
 uvm_pkg::uvm_phase_type
-181 47
-/opt/questasim/uvm-1.2/src/base/uvm_globals.svh
 38 21
 m_uvm_config_obj_misc
 37 22
@@ -288,6 +286,8 @@ uvm_callbacks_objection
 uvm_pkg::uvm_hdl_path_slice
 59 22
 uvm_tree_printer_knobs
+181 62
+/home/shared_folder/questasim/uvm-1.2/src/base/uvm_globals.svh
 120 28
 uvm_pkg::uvm_reg_cvr_rsrc_db
 163 25

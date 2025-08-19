@@ -1,6 +1,6 @@
 # vsim -c -voptargs="+acc" -assertdebug -debugDB -l logs/base_test.log testbench -wlf waveform/base_test.wlf -do "log -r /*; run -all; quit" "+UVM_TESTNAME=base_test" 
-# Start time: 22:58:16 on Aug 17,2025
-# Loading /tmp/nhat@ubuntuu_dpi_19903/linux_x86_64_gcc-11/export_tramp.so
+# Start time: 09:57:16 on Aug 19,2025
+# Loading /tmp/veron14@localhost.localdomain_dpi_20277/linux_x86_64_gcc-4.8.5/export_tramp.so
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vsim-8611) Generating debug db.
 # ** Warning: (vopt-13408) Code coverage will be disabled for some DUs/packages/classes and source files.
@@ -30,12 +30,14 @@
 # Loading work.testbench(fast)
 # Loading work.apb_if(fast__2)
 # Loading work.apb_slave_if(fast__1)
-# Compiling /tmp/nhat@ubuntuu_dpi_19903/linux_x86_64_gcc-11/exportwrapper.c
-# Loading /tmp/nhat@ubuntuu_dpi_19903/linux_x86_64_gcc-11/vsim_auto_compile.so
+# ** Warning: (vsim-8637) A modport ('apb_master_modport') should not be used in a hierarchical path.
+#    Time: 0 ps  Iteration: 0  Region: /apb_pkg File: /home/shared_folder/workspace/VIP/vip_lib/vip_lib/apb/env/apb_system_env.sv Line: 39
+# Compiling /tmp/veron14@localhost.localdomain_dpi_20277/linux_x86_64_gcc-4.8.5/exportwrapper.c
+# Loading /tmp/veron14@localhost.localdomain_dpi_20277/linux_x86_64_gcc-4.8.5/vsim_auto_compile.so
 # ** Note: (vsim-8900) Creating design debug database waveform/base_test.dbg.
 # log -r /*
 #  run -all
-# UVM_INFO /opt/questasim/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+# UVM_INFO /home/shared_folder/questasim/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
 # ----------------------------------------------------------------
 # UVM-1.2
 # (C) 2007-2014 Mentor Graphics Corporation
@@ -58,15 +60,17 @@
 #       (Specify +UVM_NO_RELNOTES to turn off this notice)
 # 
 # Testbench: Starting UVM test at time 0
-# UVM_INFO /opt/questasim/uvm-1.2/src/base/uvm_root.svh(453) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+# UVM_INFO /home/shared_folder/questasim/uvm-1.2/src/base/uvm_root.svh(453) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
 # UVM_INFO @ 0: reporter [RNTST] Running test base_test...
+# UVM_INFO /home/shared_folder/workspace/VIP/vip_lib/vip_lib/apb/agent/apb_master_agent.sv(33) @ 0: uvm_test_top.apb_environment.apb_master_agent [apb_master_agent] Completed build Master Agent
 # ---------------------------------------------------------------------
 # Name                                   Type               Size  Value
 # ---------------------------------------------------------------------
-# uvm_test_top                           base_test          -     @342 
-#   apb_environment                      apb_env            -     @362 
-#     Num Slaves                         integral           32    'd2  
-#     Master Config                      apb_master_config  -     @372 
+# uvm_test_top                           base_test          -     @344 
+#   apb_environment                      apb_env            -     @367 
+#     apb_master_agent                   apb_master_agent   -     @388 
+#     Num Slaves                         integral           32    'd1  
+#     Master Config                      apb_master_config  -     @382 
 #       is_active                        integral           1     'b1  
 #       protocol_checks_enable           integral           1     'b1  
 #       protocol_checks_coverage_enable  integral           1     'b1  
@@ -75,16 +79,7 @@
 #       transaction_coverage_enable      integral           1     'b1  
 #       data_width                       integral           32    'd32 
 #       addr_width                       integral           32    'd32 
-#     Slave Config[0]                    apb_slave_config   -     @373 
-#       is_active                        integral           1     'b1  
-#       protocol_checks_enable           integral           1     'b1  
-#       protocol_checks_coverage_enable  integral           1     'b1  
-#       state_coverage_enable            integral           1     'b1  
-#       toggle_coverage_enable           integral           1     'b1  
-#       transaction_coverage_enable      integral           1     'b1  
-#       data_width                       integral           32    'd32 
-#       addr_width                       integral           32    'd32 
-#     Slave Config[1]                    apb_slave_config   -     @374 
+#     Slave Config[0]                    apb_slave_config   -     @383 
 #       is_active                        integral           1     'b1  
 #       protocol_checks_enable           integral           1     'b1  
 #       protocol_checks_coverage_enable  integral           1     'b1  
@@ -97,14 +92,14 @@
 # ------------------------------------
 # Name     Type            Size  Value
 # ------------------------------------
-# env_cfg  apb_env_config  -     @356 
+# env_cfg  apb_env_config  -     @361 
 # ------------------------------------
-# UVM_INFO /opt/questasim/uvm-1.2/src/base/uvm_traversal.svh(279) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
-# UVM_INFO /opt/questasim/uvm-1.2/src/base/uvm_report_server.svh(847) @ 0: reporter [UVM/REPORT/SERVER] 
+# UVM_INFO /home/shared_folder/questasim/uvm-1.2/src/base/uvm_traversal.svh(279) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+# UVM_INFO /home/shared_folder/questasim/uvm-1.2/src/base/uvm_report_server.svh(847) @ 0: reporter [UVM/REPORT/SERVER] 
 # --- UVM Report Summary ---
 # 
 # ** Report counts by severity
-# UVM_INFO :    4
+# UVM_INFO :    5
 # UVM_WARNING :    0
 # UVM_ERROR :    0
 # UVM_FATAL :    0
@@ -113,8 +108,9 @@
 # [RNTST]     1
 # [UVM/COMP/NAMECHECK]     1
 # [UVM/RELNOTES]     1
+# [apb_master_agent]     1
 # 
-# ** Note: $finish    : /opt/questasim/uvm-1.2/src/base/uvm_root.svh(517)
+# ** Note: $finish    : /home/shared_folder/questasim/uvm-1.2/src/base/uvm_root.svh(517)
 #    Time: 0 ps  Iteration: 259  Instance: /testbench
-# End time: 22:58:20 on Aug 17,2025, Elapsed time: 0:00:04
-# Errors: 0, Warnings: 1
+# End time: 09:57:21 on Aug 19,2025, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 2

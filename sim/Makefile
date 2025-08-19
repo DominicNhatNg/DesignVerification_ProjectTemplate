@@ -59,6 +59,7 @@ build:
 		$(UVM_HOME)/src/uvm.sv \
 		+define+UVM_NO_DPI \
 		+define+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR \
+		+UVM_NO_DEPRECATED \
 		+cover=bcesft \
 		-suppress 2181 \
 		+acc -sv -f filelist.f | tee $(LOG_DIR)/compile.log
