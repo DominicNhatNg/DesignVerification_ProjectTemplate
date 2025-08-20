@@ -17,6 +17,7 @@ module testbench;
     end
   end
 
+
   // Instantiate APB interface
   apb_if #(
     .ADDR_WIDTH(32),

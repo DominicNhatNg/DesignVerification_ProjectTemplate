@@ -1,6 +1,6 @@
 # vsim -c -voptargs="+acc" -assertdebug -debugDB -l logs/base_test.log testbench -wlf waveform/base_test.wlf -do "log -r /*; run -all; quit" "+UVM_TESTNAME=base_test" 
-# Start time: 16:26:40 on Aug 19,2025
-# Loading /tmp/veron14@localhost.localdomain_dpi_43718/linux_x86_64_gcc-4.8.5/export_tramp.so
+# Start time: 12:56:57 on Aug 20,2025
+# Loading /tmp/veron14@localhost.localdomain_dpi_56722/linux_x86_64_gcc-4.8.5/export_tramp.so
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vsim-8611) Generating debug db.
 # ** Warning: (vopt-13408) Code coverage will be disabled for some DUs/packages/classes and source files.
@@ -31,9 +31,9 @@
 # Loading work.apb_if(fast__2)
 # Loading work.apb_slave_if(fast__1)
 # ** Warning: (vsim-8637) A modport ('apb_master_modport') should not be used in a hierarchical path.
-#    Time: 0 ps  Iteration: 0  Region: /apb_pkg File: /home/shared_folder/workspace/VIP/vip_lib/vip_lib/apb/env/apb_system_env.sv Line: 39
-# Compiling /tmp/veron14@localhost.localdomain_dpi_43718/linux_x86_64_gcc-4.8.5/exportwrapper.c
-# Loading /tmp/veron14@localhost.localdomain_dpi_43718/linux_x86_64_gcc-4.8.5/vsim_auto_compile.so
+#    Time: 0 ps  Iteration: 0  Region: /apb_pkg File: /home/shared_folder/workspace/VIP/vip_lib/vip_lib/apb/env/apb_system_env.sv Line: 40
+# Compiling /tmp/veron14@localhost.localdomain_dpi_56722/linux_x86_64_gcc-4.8.5/exportwrapper.c
+# Loading /tmp/veron14@localhost.localdomain_dpi_56722/linux_x86_64_gcc-4.8.5/vsim_auto_compile.so
 # ** Note: (vsim-8900) Creating design debug database waveform/base_test.dbg.
 # log -r /*
 #  run -all
@@ -62,19 +62,27 @@
 # Testbench: Starting UVM test at time 0
 # UVM_INFO /home/shared_folder/questasim/uvm-1.2/src/base/uvm_root.svh(453) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
 # UVM_INFO @ 0: reporter [RNTST] Running test base_test...
+# UVM_INFO /home/shared_folder/workspace/VIP/vip_lib/vip_lib/apb/agent/apb_master_agent.sv(37) @ 0: uvm_test_top.apb_environment.apb_master_agent [apb_master_agent] Master is active
+# UVM_INFO /home/shared_folder/workspace/VIP/vip_lib/vip_lib/apb/agent/apb_master_driver.sv(12) @ 0: uvm_test_top.apb_environment.apb_master_agent.master_driver [apb_master_driver] Starting build Driver...
+# UVM_INFO /home/shared_folder/workspace/VIP/vip_lib/vip_lib/apb/agent/apb_master_driver.sv(16) @ 0: uvm_test_top.apb_environment.apb_master_agent.master_driver [apb_master_driver] Completed build Driver
+# UVM_INFO /home/shared_folder/workspace/VIP/vip_lib/vip_lib/apb/agent/apb_master_monitor.sv(12) @ 0: uvm_test_top.apb_environment.apb_master_agent.master_monitor [apb_master_monitor] Starting build Monitor...
+# UVM_INFO /home/shared_folder/workspace/VIP/vip_lib/vip_lib/apb/agent/apb_master_monitor.sv(15) @ 0: uvm_test_top.apb_environment.apb_master_agent.master_monitor [apb_master_monitor] Completed build Monitor
+# UVM_INFO /home/shared_folder/workspace/VIP/vip_lib/vip_lib/apb/agent/apb_master_sequencer.sv(11) @ 0: uvm_test_top.apb_environment.apb_master_agent.master_sequencer [apb_master_sequencer] Building APB Sequencer
 # ** Fatal: (SIGSEGV) Bad handle or reference.
-#    Time: 0 ps  Iteration: 10  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#2213_7fefec4584b File: /home/shared_folder/questasim/uvm-1.2/src/base/uvm_common_phases.svh
-# Fatal error in Function uvm_sv_unit/base_test::build_phase at ../tests/base_test.sv line 36
+#    Time: 0 ps  Iteration: 10  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#2213_7fefec4b0fd File: /home/shared_folder/workspace/VIP/vip_lib/vip_lib/apb/agent/apb_slave_agent.sv
+# Fatal error in Function apb_pkg/apb_slave_agent::build_phase at /home/shared_folder/workspace/VIP/vip_lib/vip_lib/apb/agent/apb_slave_agent.sv line 23
 # 
 # HDL call sequence:
-# Stopped at ../tests/base_test.sv 36 Function uvm_sv_unit/base_test::build_phase
+# Stopped at /home/shared_folder/workspace/VIP/vip_lib/vip_lib/apb/agent/apb_slave_agent.sv 23 Function apb_pkg/apb_slave_agent::build_phase
 # called from  /home/shared_folder/questasim/uvm-1.2/src/base/uvm_common_phases.svh 65 Function uvm_pkg/uvm_build_phase::exec_func
 # called from  /home/shared_folder/questasim/uvm-1.2/src/base/uvm_topdown_phase.svh 111 Function uvm_pkg/uvm_topdown_phase::execute
 # called from  /home/shared_folder/questasim/uvm-1.2/src/base/uvm_topdown_phase.svh 78 Function uvm_pkg/uvm_topdown_phase::traverse
+# called from  /home/shared_folder/questasim/uvm-1.2/src/base/uvm_topdown_phase.svh 95 Function uvm_pkg/uvm_topdown_phase::traverse
+# called from  /home/shared_folder/questasim/uvm-1.2/src/base/uvm_topdown_phase.svh 95 Function uvm_pkg/uvm_topdown_phase::traverse
 # called from  /home/shared_folder/questasim/uvm-1.2/src/base/uvm_topdown_phase.svh 95 Function uvm_pkg/uvm_topdown_phase::traverse
 # called from  /home/shared_folder/questasim/uvm-1.2/src/base/uvm_phase.svh 1390 Task uvm_pkg/uvm_phase::execute_phase
 # called from  /home/shared_folder/questasim/uvm-1.2/src/base/uvm_phase.svh 2213 Task uvm_pkg/uvm_phase::m_run_phases
 # 
 #  quit
-# End time: 16:26:44 on Aug 19,2025, Elapsed time: 0:00:04
+# End time: 12:57:01 on Aug 20,2025, Elapsed time: 0:00:04
 # Errors: 1, Warnings: 2

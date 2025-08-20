@@ -32,8 +32,11 @@ class base_test extends uvm_test;
         uvm_config_db #(virtual apb_if)::set(this, "apb_environment", "vif", apb_vif);
 
         env_cfg = apb_env_config::type_id::create("env_cfg");
+        //env_cfg.slave_cfgs[0].is_active = 0;
+        //
         env_cfg.num_slaves = 1;
-        env_cfg.slave_cfgs[0].is_active = 0;
+
+        env_cfg.build();
         uvm_config_db #(apb_env_config) :: set(this, "apb_environment", "env_cfg", env_cfg);
         apb_environment = apb_env::type_id::create("apb_environment", this);
 
@@ -41,7 +44,7 @@ class base_test extends uvm_test;
 
     function void end_of_elaboration();
         print();
-        env_cfg.print();
+        //env_cfg.print();
     endfunction
 
 endclass
