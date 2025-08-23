@@ -1,6 +1,11 @@
 # vsim -c -voptargs="+acc" -assertdebug -debugDB -l logs/base_test.log testbench -wlf waveform/base_test.wlf -do "log -r /*; run -all; quit" "+UVM_TESTNAME=base_test" 
+<<<<<<< HEAD
 # Start time: 12:56:57 on Aug 20,2025
 # Loading /tmp/veron14@localhost.localdomain_dpi_56722/linux_x86_64_gcc-4.8.5/export_tramp.so
+=======
+# Start time: 10:22:46 on Aug 18,2025
+# Loading /tmp/nhat@ubuntuu_dpi_6615/linux_x86_64_gcc-11/export_tramp.so
+>>>>>>> 12028e1 (commit before merge)
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vsim-8611) Generating debug db.
 # ** Warning: (vopt-13408) Code coverage will be disabled for some DUs/packages/classes and source files.
@@ -30,10 +35,15 @@
 # Loading work.testbench(fast)
 # Loading work.apb_if(fast__2)
 # Loading work.apb_slave_if(fast__1)
+<<<<<<< HEAD
 # ** Warning: (vsim-8637) A modport ('apb_master_modport') should not be used in a hierarchical path.
 #    Time: 0 ps  Iteration: 0  Region: /apb_pkg File: /home/shared_folder/workspace/VIP/vip_lib/vip_lib/apb/env/apb_system_env.sv Line: 40
 # Compiling /tmp/veron14@localhost.localdomain_dpi_56722/linux_x86_64_gcc-4.8.5/exportwrapper.c
 # Loading /tmp/veron14@localhost.localdomain_dpi_56722/linux_x86_64_gcc-4.8.5/vsim_auto_compile.so
+=======
+# Compiling /tmp/nhat@ubuntuu_dpi_6615/linux_x86_64_gcc-11/exportwrapper.c
+# Loading /tmp/nhat@ubuntuu_dpi_6615/linux_x86_64_gcc-11/vsim_auto_compile.so
+>>>>>>> 12028e1 (commit before merge)
 # ** Note: (vsim-8900) Creating design debug database waveform/base_test.dbg.
 # log -r /*
 #  run -all
@@ -83,6 +93,13 @@
 # called from  /home/shared_folder/questasim/uvm-1.2/src/base/uvm_phase.svh 1390 Task uvm_pkg/uvm_phase::execute_phase
 # called from  /home/shared_folder/questasim/uvm-1.2/src/base/uvm_phase.svh 2213 Task uvm_pkg/uvm_phase::m_run_phases
 # 
+<<<<<<< HEAD
 #  quit
 # End time: 12:57:01 on Aug 20,2025, Elapsed time: 0:00:04
 # Errors: 1, Warnings: 2
+=======
+# ** Note: $finish    : /opt/questasim/uvm-1.2/src/base/uvm_root.svh(517)
+#    Time: 0 ps  Iteration: 259  Instance: /testbench
+# End time: 10:22:51 on Aug 18,2025, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 1
+>>>>>>> 12028e1 (commit before merge)

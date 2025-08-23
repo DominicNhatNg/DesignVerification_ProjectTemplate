@@ -1,6 +1,11 @@
 QuestaSim-64 vlog 2021.2_1 Compiler 2021.05 May 15 2021
+<<<<<<< HEAD
 Start time: 12:56:53 on Aug 20,2025
 vlog -mfcu "+incdir+/home/shared_folder/questasim/uvm-1.2/src" /home/shared_folder/questasim/uvm-1.2/src/uvm.sv "+define+UVM_NO_DPI" "+define+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR" "+UVM_NO_DEPRECATED" "+cover=bcesft" -suppress 2181 "+acc" -sv -f filelist.f 
+=======
+Start time: 10:22:40 on Aug 18,2025
+vlog -mfcu "+incdir+/opt/questasim/uvm-1.2/src" /opt/questasim/uvm-1.2/src/uvm.sv "+define+UVM_NO_DPI" "+define+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR" "+cover=bcesft" -suppress 2181 "+acc" -sv -f filelist.f 
+>>>>>>> 12028e1 (commit before merge)
 -- Compiling package uvm_pkg
 -- Compiling module COMP
 -- Compiling module TCCR
@@ -40,5 +45,9 @@ vlog -mfcu "+incdir+/home/shared_folder/questasim/uvm-1.2/src" /home/shared_fold
 Top level modules:
 	apb_slave_timer
 	testbench
+<<<<<<< HEAD
 End time: 12:56:54 on Aug 20,2025, Elapsed time: 0:00:01
+=======
+End time: 10:22:42 on Aug 18,2025, Elapsed time: 0:00:02
+>>>>>>> 12028e1 (commit before merge)
 Errors: 0, Warnings: 1

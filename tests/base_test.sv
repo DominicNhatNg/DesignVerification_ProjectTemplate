@@ -19,10 +19,12 @@ class base_test extends uvm_test;
 
     //// config
 
+    /*<-----UVM Test Instantiate new component---->*/
     function new(string name="base_test", uvm_component parent);
         super.new(name, parent);
     endfunction
-
+    
+    /*<-----UVM Test build phase---->*/
     function void build_phase(uvm_phase phase);
         super.build_phase(phase);
 
